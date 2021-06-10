@@ -69,7 +69,7 @@ microcks:
 keycloak:
   # url to keycloak app
   url: http://35.232.47.140:8080/auth
-  realm: Apicurio
+  realm: apicurio
   client:
     id: apicurio-studio
     #default secret
