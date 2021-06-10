@@ -1,0 +1,21 @@
+project: default
+source:
+  repoURL: 'https://github.com/dablon/apicurio-studio.git'
+  path: distro/helm
+  targetRevision: HEAD
+  helm:
+    valueFiles:
+      - values.yaml
+    parameters:
+      - name: ui.hostname
+        value: 'http://34.71.237.89:8093'
+      - name: keycloak.realm
+        value: Apicurio
+      - name: loggingEnabled
+        value: 'true'
+destination:
+  server: 'https://kubernetes.default.svc'
+  namespace: apicurio-studio
+syncPolicy:
+  syncOptions:
+    - CreateNamespace=true
