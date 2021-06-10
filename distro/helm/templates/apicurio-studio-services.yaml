@@ -23,6 +23,7 @@ spec:
     - name: {{ .Values.ui.port | quote }}
       port: {{ .Values.ui.port }}
       targetPort: 8080
+  type: LoadBalancer    
   selector:
     module: {{ .Values.ui.name }}
 ---
