@@ -68,7 +68,7 @@ microcks:
 #Configure keycloak application
 keycloak:
   # url to keycloak app
-  url: http://KEYCLOAK_URL/auth
+  url: http://35.232.47.140:8080/auth
   realm: Apicurio
   client:
     id: apicurio-studio
